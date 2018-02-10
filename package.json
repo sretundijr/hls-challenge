@@ -13,6 +13,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "hls-fetcher": "git+https://github.com/sretundijr/hls-fetcher.git#remove-dir",
+    "mkdirp": "^0.5.1",
     "nodemon": "^1.14.12"
   }
 }
