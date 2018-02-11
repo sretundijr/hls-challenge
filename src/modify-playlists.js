@@ -6,14 +6,18 @@ const path = require('path');
 
 const getManifest = (manifestFileName, callback) => {
 
-  // let manifestFileName = path.basename(req.query.hlsurl).match(/^.+\..+\?/)[0];
-  // manifestFileName = manifestFileName.substring(0, manifestFileName.length - 1);
+  // creates a new manifest file to manage downloads, this file is overwritten
+  // to point to the new downloaded hls
+  const newManifestFile = `${process.cwd()}/streams/manifest.m3u8`
 
   const file = `${process.cwd()}/streams/${manifestFileName}`;
 
+  // TODO remove hardcoded path 
   const newFile = modifyPlaylistsEndpoint(file, 'http://localhost:8080');
 
-  fs.writeFileSync(file, newFile, 'utf8');
+  // writes to new manifest file, this eliminates the duplication
+  // as my changes to hls-fetcher require an unmodified downloaded manifest
+  fs.writeFileSync(newManifestFile, newFile, 'utf8');
 
   callback();
 }

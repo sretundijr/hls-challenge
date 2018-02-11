@@ -62,7 +62,7 @@ app.get('/stream', (req, res) => {
         getManifest(
           manifestFileName,
           () => {
-            res.sendFile(path.join(__dirname, '../streams', manifestFileName))
+            res.sendFile(path.join(__dirname, '../streams', 'manifest.m3u8'))
           }
         )
       }
