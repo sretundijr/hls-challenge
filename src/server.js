@@ -29,8 +29,6 @@ app.use((req, res, next) => {
 
 app.get('/stream', (req, res) => {
 
-  console.log(req.query);
-
   // create a stream subdir
   const subDir = path.resolve(process.cwd(), 'streams');
 
@@ -57,12 +55,10 @@ app.get('/stream', (req, res) => {
           manifestFileName = path.basename(req.query.hlsurl);
         }
 
-        console.log(manifestFileName);
-
         getManifest(
           manifestFileName,
           () => {
-            res.sendFile(path.join(__dirname, '../streams', 'manifest.m3u8'))
+            res.sendFile(path.join(__dirname, '../streams', 'manifest.m3u8'));
           }
         )
       }
