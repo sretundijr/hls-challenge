@@ -13,7 +13,7 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.2",
-    "hls-fetcher": "git+https://github.com/sretundijr/hls-fetcher.git#remove-dir",
+    "hls-fetcher": "git+https://github.com/sretundijr/hls-fetcher.git#ts-bug-fix",
     "m3u8-reader": "^1.1.0",
     "m3u8-write": "^1.0.0",
     "mkdirp": "^0.5.1",
