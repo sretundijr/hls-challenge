@@ -26,7 +26,7 @@ const modifyPlaylistsEndpoint = (playlist, endpoint) => {
 
   const currentPlaylist = m3u8Read(fs.readFileSync(playlist, 'utf8'));
 
-  modifiedPlaylist = currentPlaylist.map((item) => {
+  const modifiedPlaylist = currentPlaylist.map((item) => {
     if (typeof (item) === 'string') {
       return `${endpoint}/${item}`;
     }
