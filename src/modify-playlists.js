@@ -4,16 +4,16 @@ const m3u8Write = require('m3u8-write');
 const fs = require('fs');
 const path = require('path');
 
+const pathToAddToManifest = 'https://vast-brook-68324.herokuapp.com/'
+// const pathToAddToManifest = 'http://localhost:8080';
+// const pathToAddToManifest = 'https://testing-hls-challenge-full-stack-steve-jr.c9users.io:8080'
+
+
 const getManifest = (manifestFileName, callback) => {
 
   // creates a new manifest file to manage downloads, this file is overwritten
   // to point to the new downloaded hls
   const newManifestFile = `${process.cwd()}/streams/manifest.m3u8`;
-
-
-  const pathToAddToManifest = 'https://vast-brook-68324.herokuapp.com/'
-  // const pathToAddToManifest = 'http://localhost:8080';
-  // const pathToAddToManifest = 'https://testing-hls-challenge-full-stack-steve-jr.c9users.io:8080'
 
   const file = path.resolve(__dirname, '../streams', manifestFileName);
 
