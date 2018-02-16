@@ -6,8 +6,6 @@ const path = require('path');
 
 const pathToAddToManifest = 'https://pacific-ravine-11429.herokuapp.com/'
 // const pathToAddToManifest = 'http://localhost:8080';
-// const pathToAddToManifest = 'https://testing-hls-challenge-full-stack-steve-jr.c9users.io:8080'
-
 
 const getManifest = (manifestFileName, callback) => {
 
