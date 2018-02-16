@@ -9,9 +9,14 @@ const getManifest = (manifestFileName, callback) => {
   // creates a new manifest file to manage downloads, this file is overwritten
   // to point to the new downloaded hls
   const newManifestFile = `${process.cwd()}/streams/manifest.m3u8`;
-  const pathToAddToManifest = 'http://localhost:8080';
 
-  const file = `${process.cwd()}/streams/${manifestFileName}`;
+
+  const pathToAddToManifest = 'http://localhost:8080';
+  // const pathToAddToManifest = 'https://testing-hls-challenge-full-stack-steve-jr.c9users.io:8080'
+
+  // const file = `${process.cwd()}/streams/${manifestFileName}`;
+
+  const file = path.resolve(__dirname, '../streams', manifestFileName);
 
   const newFile = modifyPlaylistsEndpoint(file, pathToAddToManifest);
 
