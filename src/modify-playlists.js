@@ -4,7 +4,7 @@ const m3u8Write = require('m3u8-write');
 const fs = require('fs');
 const path = require('path');
 
-const pathToAddToManifest = 'https://pacific-ravine-11429.herokuapp.com/'
+const pathToAddToManifest = 'https://pacific-ravine-11429.herokuapp.com'
 // const pathToAddToManifest = 'http://localhost:8080';
 
 const getManifest = (manifestFileName, callback) => {
