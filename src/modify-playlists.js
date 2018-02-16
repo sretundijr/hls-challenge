@@ -14,8 +14,6 @@ const getManifest = (manifestFileName, callback) => {
   const pathToAddToManifest = 'http://localhost:8080';
   // const pathToAddToManifest = 'https://testing-hls-challenge-full-stack-steve-jr.c9users.io:8080'
 
-  // const file = `${process.cwd()}/streams/${manifestFileName}`;
-
   const file = path.resolve(__dirname, '../streams', manifestFileName);
 
   const newFile = modifyPlaylistsEndpoint(file, pathToAddToManifest);
