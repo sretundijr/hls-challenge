@@ -11,7 +11,8 @@ const getManifest = (manifestFileName, callback) => {
   const newManifestFile = `${process.cwd()}/streams/manifest.m3u8`;
 
 
-  const pathToAddToManifest = 'http://localhost:8080';
+  const pathToAddToManifest = 'https://vast-brook-68324.herokuapp.com/'
+  // const pathToAddToManifest = 'http://localhost:8080';
   // const pathToAddToManifest = 'https://testing-hls-challenge-full-stack-steve-jr.c9users.io:8080'
 
   const file = path.resolve(__dirname, '../streams', manifestFileName);
